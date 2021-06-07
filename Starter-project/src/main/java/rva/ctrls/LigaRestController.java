@@ -46,7 +46,7 @@ public class LigaRestController {
 	}
 	
 	@GetMapping("ligaNaziv/{naziv}")
-	@ApiOperation(value = "Vraća kolekciju liga koje sadrže vrednost prosleđenu u okviru path varijable naziv.")
+	@ApiOperation(value = "Vraca kolekciju liga koje sadrže vrednost prosleđenu u okviru path varijable naziv.")
 	public Collection<Liga> getLigaByNaziv(@PathVariable ("naziv") String naziv){
 		return ligaRepository.findByNazivContainingIgnoreCase(naziv);
 	}
